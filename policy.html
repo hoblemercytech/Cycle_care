@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Policies | CycleCare</title>
+  
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>
+  <style>
+    :root{
+      --pink:#EC4899;
+      --purple:#8B5CF6;
+      --bg:#FFF7FC;
+      --text:#1E1B4B;
+      --muted:#6B7280;
+      --white:#fff;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Inter,Arial,sans-serif;
+      background:linear-gradient(180deg,#FFF7FC,#fff);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .policy-nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(255,255,255,.8);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(236,72,153,.12);
+      padding:16px 24px;
+    }
+
+    .policy-nav-inner{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:900;
+      text-decoration:none;
+      color:var(--text);
+    }
+
+    .logo span{color:var(--pink)}
+
+    .nav-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .nav-links a:hover{color:var(--pink)}
+
+    .hero{
+      max-width:1000px;
+      margin:0 auto;
+      padding:80px 24px 40px;
+      text-align:center;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:9px 16px;
+      border-radius:999px;
+      background:#FCE7F3;
+      color:var(--pink);
+      font-weight:800;
+      margin-bottom:18px;
+    }
+
+    h1{
+      font-size:clamp(36px,6vw,64px);
+      line-height:1.1;
+      margin-bottom:18px;
+    }
+
+    .gradient{
+      background:linear-gradient(120deg,var(--pink),var(--purple));
+      -webkit-background-clip:text;
+      color:transparent;
+    }
+
+    .hero p{
+      max-width:720px;
+      margin:auto;
+      color:var(--muted);
+      font-size:17px;
+    }
+
+    .container{
+      max-width:950px;
+      margin:0 auto;
+      padding:30px 24px 100px;
+    }
+
+    .policy-card{
+      background:rgba(255,255,255,.86);
+      border:1px solid rgba(236,72,153,.12);
+      border-radius:30px;
+      padding:34px;
+      margin-bottom:28px;
+      box-shadow:0 25px 70px -35px rgba(139,92,246,.35);
+      scroll-margin-top:110px;
+    }
+
+    .policy-card h2{
+      font-size:30px;
+      margin-bottom:14px;
+    }
+
+    .policy-card h3{
+      margin-top:24px;
+      margin-bottom:8px;
+      font-size:19px;
+    }
+
+    .policy-card p,
+    .policy-card li{
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+
+    ul{padding-left:22px}
+
+    .note{
+      margin-top:18px;
+      padding:16px 18px;
+      border-radius:18px;
+      background:linear-gradient(135deg,rgba(236,72,153,.08),rgba(139,92,246,.08));
+      color:var(--text);
+      font-weight:600;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      color:var(--muted);
+      border-top:1px solid rgba(236,72,153,.12);
+    }
+
+    footer a{
+      color:var(--pink);
+      text-decoration:none;
+      font-weight:800;
+    }
+    .policy-card h2 i {
+  color: var(--pink);
+  margin-right: 10px;
+}
+
+.policy-card h3 i {
+  color: var(--purple);
+  margin-right: 8px;
+  font-size: .95em;
+}
+
+.logo i {
+  color: var(--pink);
+  margin-right: 8px;
+}
+
+.nav-links a i {
+  margin-right: 6px;
+  color: var(--purple);
+}
+
+footer i {
+  color: var(--pink);
+}
+
+    @media(max-width:600px){
+      .policy-card{padding:26px 20px}
+      .nav-links{gap:10px}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="policy-nav">
+  <div class="policy-nav-inner">
+    <a href="index.html" class="logo">
+      <i class="fa-solid fa-heart-circle-check"></i>
+      Cycle<span>Care</span>
+    </a>
+    
+    <div class="nav-links">
+      <a href="#privacy">
+        <i class="fa-solid fa-shield-heart"></i>
+        Privacy
+      </a>
+      
+      <a href="#terms">
+        <i class="fa-solid fa-file-contract"></i>
+        Terms
+      </a>
+      
+      <a href="#cookies">
+        <i class="fa-solid fa-cookie-bite"></i>
+        Cookies
+      </a>
+      
+      <a href="#security">
+        <i class="fa-solid fa-lock"></i>
+        Security
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <header class="hero">
+    <div class="badge">Legal & Privacy</div>
+    <h1>Your Data. Your Body. <span class="gradient">Your Control.</span></h1>
+    <p>
+      CycleCare is built to help women track their cycles with confidence.
+      These policies explain how we handle your information, protect your privacy,
+      and keep your account secure.
+    </p>
+  </header>
+
+  <main class="container">
+
+    <section class="policy-card" id="privacy">
+     <h2>
+  <i class="fa-solid fa-shield-heart"></i>
+  Privacy Policy
+</h2>
+      <p>
+        CycleCare respects your privacy. We collect only the information needed
+        to create your account, save your cycle records, and provide personalized
+        cycle and ovulation insights.
+      </p>
+
+    <h3>
+  <i class="fa-solid fa-database"></i>
+  Information We May Collect
+</h3>
+      <ul>
+        <li>Your name and email address.</li>
+        <li>Your selected health goal.</li>
+        <li>Cycle logs such as period start date and period end date.</li>
+        <li>App usage data needed to improve the service.</li>
+      </ul>
+
+     <h3>
+  <i class="fa-solid fa-chart-line"></i>
+  How We Use Your Information
+</h3>
+      <ul>
+        <li>To create and manage your CycleCare account.</li>
+        <li>To calculate cycle length, period length, ovulation estimates, and fertile windows.</li>
+        <li>To improve app performance and user experience.</li>
+        <li>To protect your account and prevent misuse.</li>
+      </ul>
+
+     <h3>
+  <i class="fa-solid fa-user-doctor"></i>
+  Health Disclaimer
+</h3>
+      <p>
+        CycleCare provides estimated cycle and fertility information based on the
+        data you enter. It does not provide medical diagnosis and should not replace
+        professional healthcare advice.
+      </p>
+
+      <div class="note">
+        We do not sell your cycle or fertility data.
+      </div>
+    </section>
+
+    <section class="policy-card" id="terms">
+    <h2>
+  <i class="fa-solid fa-file-contract"></i>
+  Terms of Service
+</h2>
+      <p>
+        By using CycleCare, you agree to use the app responsibly and understand
+        that all predictions are estimates based on your cycle history.
+      </p>
+
+     <h3>
+  <i class="fa-solid fa-circle-check"></i>
+  Use of the App
+</h3>
+      <ul>
+        <li>You must provide accurate information for better predictions.</li>
+        <li>You are responsible for keeping your login details secure.</li>
+        <li>You should not use CycleCare for emergencies or urgent medical decisions.</li>
+      </ul>
+
+     <h3>
+  <i class="fa-solid fa-baby"></i>
+  Fertility & Pregnancy Disclaimer
+</h3>
+      <p>
+        CycleCare can help identify likely fertile days and ovulation windows, but
+        it cannot guarantee pregnancy or prevent pregnancy. Ovulation can change
+        due to stress, illness, hormones, medication, breastfeeding, irregular cycles,
+        and other factors.
+      </p>
+<h3>
+  <i class="fa-solid fa-user-lock"></i>
+  Account Access
+</h3>
+      <p>
+        We may restrict access to accounts that abuse the platform, attempt to
+        compromise security, or violate these terms.
+      </p>
+    </section>
+
+    <section class="policy-card" id="cookies">
+    <h2>
+  <i class="fa-solid fa-cookie-bite"></i>
+  Cookie Policy
+</h2>
+      <p>
+        CycleCare may use cookies or browser storage to keep you logged in,
+        remember basic preferences, and improve app performance.
+      </p>
+
+     <h3>
+  <i class="fa-solid fa-laptop"></i>
+  What Cookies Help With
+</h3>
+      <ul>
+        <li>Keeping your login session active.</li>
+        <li>Remembering selected preferences.</li>
+        <li>Improving app speed and user experience.</li>
+      </ul>
+
+     <h3>
+  <i class="fa-solid fa-sliders"></i>
+  Your Control
+</h3>
+      <p>
+        You can clear cookies or browser storage through your browser settings.
+        However, doing so may log you out of your account.
+      </p>
+    </section>
+
+    <section class="policy-card" id="security">
+  <h2>
+  <i class="fa-solid fa-lock"></i>
+  Data Security
+</h2>
+      <p>
+        CycleCare uses secure authentication and database access rules to protect
+        user information. Your profile and cycle data are connected to your own
+        account.
+      </p>
+
+    <h3>
+  <i class="fa-solid fa-shield-halved"></i>
+  How We Protect Your Data
+</h3>
+      <ul>
+        <li>Secure login through Supabase Authentication.</li>
+        <li>Row Level Security policies to limit data access.</li>
+        <li>User-specific records so users can only access their own data.</li>
+        <li>Admin access restrictions for management features.</li>
+      </ul>
+
+     <h3>
+  <i class="fa-solid fa-key"></i>
+  Your Responsibility
+</h3>
+      <p>
+        Use a strong password, avoid sharing your login details, and always log out
+        when using a shared device.
+      </p>
+
+      <div class="note">
+        Your cycle information is sensitive. CycleCare is designed with privacy-first protection.
+      </div>
+    </section>
+
+  </main>
+
+ <footer>
+  <p>
+    <i class="fa-regular fa-copyright"></i>
+    CycleCare 2026.
+    All rights reserved.
+  </p>
+  
+  <p>
+    <a href="index.html">
+      <i class="fa-solid fa-house"></i>
+      Back to Home
+    </a>
+  </p>
+</footer>
+
+</body>
+</html>
